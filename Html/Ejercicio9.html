@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Formulario d'inscripció Cyberwall</h1>
+    <form action="destino.php" method="post">
+        <label for="nombre">Name:</label><br>
+        <input type="text" name="nombre" id="nombre" required placeholder="Nom i cognoms..."><br>
+
+        <label for="username">Create a user name:</label><br>
+        <input type="text" name="username" id="username" required><br>
+
+        <label for="contraseña">Create a password:</label><br>
+        <input type="text" name="contraseña" id="contraseña" minlength="6" maxlength="12" required><br><br>
+
+        <label for="cumpleaños">Birthday:</label>
+        <input type="date" name="cumpleaños" id="cumpleaños"><br>
+
+        <label for="opciones">I am</label>
+        <select name="opciones" id="opciones">
+            <option value="0">a student</option>
+            <option value="1">a teacher</option>
+            <option value="2">a business owner</option>
+            <option value="3">self-employed</option>
+            <option value="4">other</option>
+        </select><br>
+
+        <label for="telefeno">Mobile Phone:</label><br>
+        <input type="text" name="telefono" id="telefono" required><br>
+
+        <label for="ingles">Select your English level (0-10):</label><br>
+        <input type="range" name="ingles" id="ingles" min="0" max="10" value="4"><br><br>
+        
+        <button type="submit">Sign me up</button>
+    </form>
+</body>
