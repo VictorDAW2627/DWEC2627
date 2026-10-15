@@ -10,4 +10,7 @@ for (let index = 0; index < 5; index++) {
 console.log(valores);
 
 let set = new Set(valores);
-console.log(set);
+valores = [...set].join(", ");
+texto = document.createElement('p');
+texto.textContent = valores.toString();
+document.body.appendChild(texto);
