@@ -2,16 +2,28 @@ num = 5
 
 alert(cuadrado(num))
 
-alert(incrementar());
+//console.log(contador);
 
 function cuadrado(num) {
     return num *= num;
 }
 
-const incrementar = (function () {
-    let contador = 0
-    return function () {
-        contador++;
-        return contador;
+(function() {
+    let contador = 0;
+    contador++;
+    console.log("Dentro de la funcion:", contador)
+})();
+
+(function (cadena, numero) {
+    console.log(cadena+numero)
+})("Edad: ", 25);
+
+const esPar = (numero) =>{
+    if (numero%2==0) {
+        return true;
+    } else {
+        return false;
     }
-})
+} 
+
+console.log(esPar(2));
