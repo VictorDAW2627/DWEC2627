@@ -5,13 +5,13 @@ class Rectangulo {
 
     constructor(ancho, alto) {
         if (ancho <= 0) {
-            ancho = 1;
+            this.ancho = 1;
         }else{
             this.ancho=ancho;
         }
 
         if (alto <= 0) {
-            alto = 1;
+            this.alto = 1;
         }else{
             this.alto=alto;
         }
@@ -27,17 +27,17 @@ class Rectangulo {
     }
 
     copia(){
-        return copia = new Rectangulo(this.ancho, this.alto);
+        let copia = new Rectangulo(this.ancho, this.alto)
+        return copia;
     }
 
     comparar(rectangulo){
-        switch (rectangulo) {
-            case rectangulo.calcularArea()<this.calcularArea():
-                return "Mayor";
-            case rectangulo.calcularArea()>this.calcularArea():
-                return "Menor";
-            default:
-                return "Igual";
+        if (rectangulo.calcularArea()<this.calcularArea()) {
+            return "Mayor";
+        }else if (rectangulo.calcularArea()>this.calcularArea()) {
+            return "Menor";
+        }else{
+            return "Igual";
         }
     }
 
@@ -51,12 +51,12 @@ class Rectangulo {
 
 }
 
-let body = document.getElementsByTagName["body"][0];
+let body = document.getElementsByTagName("body")[0];
 let parrafo = document.createElement("p");
 
 let r1 = new Rectangulo(5, 4);
 let area = r1.calcularArea();
-parrafo.textContent = "El rectangulo r1 tiene las dimensiones "+r1.getAncho+" de ancho y "+r1.getAlto+" de alto, y su area es: "+area;
+parrafo.textContent = "El rectangulo r1 tiene las dimensiones "+r1.getAncho()+" de ancho y "+r1.getAlto()+" de alto, y su area es: "+area;
 body.appendChild(parrafo);
 let r2 = r1.copia();
 area = r2.calcularArea();
