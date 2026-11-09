@@ -6,9 +6,12 @@ cuerpo.appendChild(mensaje);
 window.onkeydown = function (event) {
   if (event.altKey && event.key === "F12") {
     event.preventDefault();
-    cuerpo.style.backgroundImage = "url(prueba.jpg)";
-    document.body.style.backgroundSize = "cover"; 
-    document.body.style.backgroundRepeat = "no-repeat"; 
-    document.body.style.backgroundPosition = "center";
+    cuerpo.style.backgroundImage = `url("${imagenAleatoria()}")`;
   }
 };
+
+function imagenAleatoria() {                     
+   const aleatorioNum = Math.floor(Math.random() * 100);
+
+   return `https://picsum.photos/seed/${aleatorioNum}/1920/1080`;
+}
