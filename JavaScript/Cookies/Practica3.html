@@ -1,13 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Ejercicio 3</title>
-</head>
-<body>
-    <!-- Cambie el archivo js y css para probar cada ejercicio -->
-    <script src="Ejercicio3.js"></script>
-</body>
+  </head>
+  <body>
+    <!-- Este ejercicio solo funciona en Live Server -->
+    <script type="module">
+      import {temporizador, cuenta} from "./temporizador.js";
+      cuenta(6);
+      cuenta(60, document.body, 100, (texto)=>{
+        texto.textContent = "Fin";
+      });
+    </script>
+  </body>
 </html>
